@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Businesses – Lesotho's Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="business-page">
+  <!--video Background-->
+  <video autoplay muted loop playsinline id="bg-video"> 
+    <source src="tech.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <header>
+    <h1>Lesotho Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="tips.html">Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="business-list">
+      <h2>Products from Businesses</h2>
+      <p>Browse through our wide selection of local businesses offering high-quality products and services.</p>
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="all">All</option>
+        <option value="Farmers">Farmers</option>
+        <option value="Crafts">Crafts</option>
+        <option value="Services">Services</option>
+        <option value="artisans">Artisans</option>
+      </select>
+
+      
+
+
+
+
+      
+    </section>
+    <div class="category-list">
+      <a href="farmers.html">Farmers</a>
+      <a href="crafts.html">Crafts</a>
+      <a href="services.html">Services</a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Lesotho's Hub – All Rights Reserved</p>
+  </footer>
+  <script>
+    // Highlight active page
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('nav ul li a');
+    const menuLength = menuItem.length;
+    for (let i = 0; i < menuLength; i++) {
+      if (menuItem[i].href === currentLocation) {
+        menuItem[i].className = "active";
+      }
+    }
+    function filterProducts() {
+      const filter = document.getElementById("categoryFilter").value;
+      const products = document.querySelectorAll('.product');
+
+      products.forEach(product => {
+        if (filter === "all" || product.dataset.category === filter) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+  </script
+</body>
+</html>
+
+
+
+

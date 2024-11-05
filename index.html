@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home – Lesotho Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="home-page"> <!—Background image applied to home page 
+  <header>
+    <h1>Lesotho's Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="tips.html">Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+    <h2>Welcome to Lesotho's Hub</h2>
+    <p>Lesotho's Hub is the central online marketplace where local businesses from Lesotho showcace their products and services. Our gooal is to support small and medium-sized enterprices in reaching a broader customer base.</p>
+  </section>
+    <div class="category-list">
+      <a href="business.html">Businesses</a>
+      
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Lesotho's Hub – All Rights Reserved</p>
+  </footer>
+  <script>
+    // Highlight active page
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('nav ul li a');
+    const menuLength = menuItem.length;
+    for (let i = 0; i < menuLength; i++) {
+      if (menuItem[i].href === currentLocation) {
+        menuItem[i].className = "active";
+      }
+    }
+  </script
+</body>
+</html>

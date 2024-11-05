@@ -1,0 +1,277 @@
+/* Reset CSS */
+•	{
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+    Font-family: ‘Arial’, sans-serif;
+  }
+  
+  /* Body */
+  Body {
+    Background-color: #080808;
+    Color: #333;
+    Line-height: 1.6;
+  }
+  
+  /* Home Page styling*/
+  #home-page {
+    background-image: url('zamia.png'); no-repeat center center fixed;
+    Background-size: cover;
+    height: 100vh;
+    width: 100%;
+    Color: #fff; /* Adjust text color for contrast with background image */
+    text-align: center;
+  }
+  
+  /* Video Background for other Pages */
+  #bg-video {
+    Position: fixed; /*Ensure the video stays in place as the user scrolls*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    z-index: -1; /* make sure the video stays behind the content */
+    opacity: 0.8; /* Adjust the opacity if needed to make the content more readable*/  */
+  }
+  
+  Body:not(#home-page) {
+    Position: relative;
+    Background: none; /* Remove default background */
+    Color: rgb(14, 13, 13); /* Text color for contrast with video */
+  }
+  
+  /* Header */
+  Header {
+    Background-color: rgba(44, 62, 80, 0.8); /* Slight transparency for the header */
+    Color: #ecf0f1;
+    Padding: 3px;
+    Text-align: center;
+  }
+  
+  Header h1 {
+    
+    Font-size: 3em;
+    Letter-spacing: 2px;
+    Font-family: ‘Courier New’, Courier, monospace;
+    text-align: left;
+  }
+  
+  Nav ul {
+    List-style-type: none;
+    Padding: 0;
+  }
+  
+  Nav ul li {
+    Display: inline;
+    Margin: 0 20px;
+  }
+  
+  Nav ul li a {
+    Color: #ecf0f1;
+    Text-decoration: none;
+    Font-size: 1.2em;
+    Padding: 10px;
+    text-align: center;
+    
+  }
+  
+  Nav ul li a:hover,
+  Nav ul li a.active {
+    Background-color: #e74c3c;
+    Border-radius: 5px;
+    Padding: 10px;
+    Transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Main content */
+  Main {
+    Padding: 40px 20px;
+    color: #ecf0f1;
+  }
+  
+  H2 {
+    Font-size: 2.5em;
+    Margin-bottom: 20px;
+    Color: #300ef18c;
+    Text-transform: uppercase;
+    text-align: center;
+  }
+  
+  P {
+    Font-size: 1.3em;
+    Margin-bottom: 15px;
+    Line-height: 1.8;
+    Color: #effcfc;
+  }
+  
+  /* Category List */
+  .category-list {
+    Display: flex;
+    Justify-content: center;
+    Margin-top: 20px;
+  }
+  
+  .category-list a {
+    Background-color: #2980b9;
+    Color: white;
+    Padding: 10px 20px;
+    Margin: 0 10px;
+    Border-radius: 5px;
+    Text-decoration: none;
+    Font-weight: bold;
+  }
+  
+  .category-list a:hover {
+    Background-color: #e74c3c;
+    Transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Products Section */
+  .business-list .product {
+    Background-color: #ecf0f1;
+    Padding: 20px;
+    Margin: 20px 0;
+    Border-radius: 10px;
+    Box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .business-list .product h3 {
+    Color: #3498db;
+    Margin-bottom: 10px;
+  }
+  
+  .business-list .product p {
+    Font-size: 1.2em;
+  }
+  
+  /* Forms */
+  .contact-form form {
+    Display: flex;
+    Flex-direction: column;
+    Width: 80%;
+    Max-width: 600px;
+    Margin: 20px auto;
+    Background-color: #fff;
+    Padding: 20px;
+    Border-radius: 10px;
+    Box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form label {
+    Margin: 10px 0 5px;
+    Font-size: 1.2em;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    Padding: 10px;
+    Font-size: 1em;
+    Margin-bottom: 15px;
+    Border: 2px solid #bdc3c7;
+    Border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    Resize: vertical;
+    Height: 100px;
+  }
+  
+  .contact-form button {
+    Padding: 10px;
+    Font-size: 1.1em;
+    Background-color: #27ae60;
+    Color: white;
+    Border: none;
+    Border-radius: 5px;
+    Cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    Background-color: #2ecc71;
+    Transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Tips List */
+  .tips ul {
+    List-style-type: none;
+  }
+  
+  .tips ul li {
+    Background-color: #f39c12;
+    Color: rgb(12, 12, 12);
+    Padding: 15px;
+    Margin: 10px 0;
+    Border-radius: 10px;
+    Font-size: 1.2em;
+  }
+  
+  .tips ul li:hover {
+    Background-color: #e67e22;
+    Transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Footer */
+  Footer {
+    Background-color: #34495e;
+    Color: #ecf0f1;
+    Text-align: center;
+    Padding: 10px;
+    position: fixed;
+    Bottom: 0;
+    Width: 100%;
+  }
+  
+  Footer p {
+    Margin: 10px 0;
+    Font-size: 1em;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    Header h1 {
+      Font-size: 2.5em;
+    }
+  
+    Nav ul li {
+      Display: block;
+      Margin: 10px 0;
+    }
+  
+    .category-list {
+      Flex-direction: column;
+      Align-items: center;
+    }
+  
+    .contact-form form {
+      Width: 95%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    Header h1 {
+      Font-size: 2em;
+    }
+  
+    Main h2 {
+      Font-size: 2em;
+    }
+  
+    .tips ul li {
+      Font-size: 1em;
+    }
+  
+    Nav ul li {
+      Margin: 5px 0;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

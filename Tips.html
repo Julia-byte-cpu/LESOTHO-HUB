@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name=”viewport” content="width=device-width, initial-scale=1.0">
+  <title>Business Tips – Lesotho Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="Tips-page">
+  <video autoplay muted loop id="bg-video"> 
+    <source src="tech.mp4" type="video/mp">
+    Your browser does not support the video tag.
+  </video>
+  <header>
+    <h1>Lesotho Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="tips.html">Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="tips">
+      <h2>Business Tips</h2>
+
+      <!-- Random Tip Button and Display -->
+  <button onclick="displayRandomTip()">Get a Random Tip</button>
+  <p id="random-tip"></p>
+
+      <ul>
+        <li><strong>Know Your Market:</strong> Always research your target audience to understand their needs and preferences.</li>
+        <li><strong>Offer Quality Products:</strong> Quality drives customer loyalty, so ensure that your products or services meet or exceed expectations.</li>
+        <li><strong>Engage with Customers:</strong> Use social media and other platforms to interact with your customers and build lasting relationships.</li>
+        <li><strong>Manage Finances Wisely:</strong> Keep track of your cash flow and reduce unnecessary expenses.</li>
+        <li><strong>Adapt to Trends:</strong> Stay informed about market trends and innovate accordingly to stay ahead of competitors.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Lesotho Hub – All Rights Reserved</p>
+  </footer>
+   <!-- Add the JavaScript for interactivity -->
+   <script>
+    // Toggle Tips by Category
+    function toggleTips(categoryId) {
+      const category = document.getElementById(categoryId);
+      const displayStyle = category.style.display === 'none' ? 'block' : 'none';
+      category.style.display = displayStyle;
+    }
+
+    // Random Tip Generator
+    function displayRandomTip() {
+      const tips = [
+        "Invest in digital marketing for a stronger online presence.",
+        "Build strong relationships with your customers through consistent engagement.",
+        "Consider offering discounts to attract new customers.",
+        "Manage your finances wisely to ensure sustainable growth.",
+        "Utilize social media platforms to reach a wider audience."
+      ];
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      document.getElementById('random-tip').textContent = tips[randomIndex];
+    }
+    // Highlight active page
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('nav ul li a');
+    const menuLength = menuItem.length;
+    for (let i = 0; i < menuLength; i++) {
+      if (menuItem[i].href === currentLocation) {
+        menuItem[i].className = "active";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
